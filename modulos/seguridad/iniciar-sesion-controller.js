@@ -12,6 +12,9 @@ App.controller('IniciarSesionController', function($scope, $location) {
   $scope.usuario = {};
   
   $scope.init = function() {
+    _ScopeContainer['MainController'].esconderMenu = true;
+    _ScopeContainer['MainController'].esconderHeader = true;
+    
     $scope.usuario.nombreAdmi = "administrador@gmail.com",
     $scope.usuario.contrasennaAdmi = "1234"
     $scope.usuario.nombreCliente = "usuariocliente@gmail.com",
@@ -23,24 +26,27 @@ App.controller('IniciarSesionController', function($scope, $location) {
   $scope.iniciarSesion = function() {
     //Si es administrador
     if ($scope.nombre === $scope.usuario.nombreAdmi && $scope.contrasenna == $scope.usuario.contrasennaAdmi){
-      $scope.menuAdmin = true;
-      $scope.mostrarMensaje = false;
-      $location.path('/menuadministrador');
+      _ScopeContainer['MainController'].esAdministrador = true;
+      _ScopeContainer['MainController'].esconderMenu = false;
+      _ScopeContainer['MainController'].esconderHeader = false;
       
+      $scope.mostrarMensaje = false;
+      $location.path('/catering-registrar');
       
     }else {
       $scope.mostrarMensaje = true;
     }
-    
     
     //Si es usuario
     if ($scope.nombre === $scope.usuario.nombreCliente && $scope.contrasenna == $scope.usuario.contrasennaCliente){
+      _ScopeContainer['MainController'].esAdministrador = false;
+      _ScopeContainer['MainController'].esconderMenu = false;
+      _ScopeContainer['MainController'].esconderHeader = false;
+      
       $scope.mostrarMensaje = false;
-      $scope.menuCliente = true;
-      $location.path('/menucliente');
+      $location.path('/catering-buscar');
     }else {
       $scope.mostrarMensaje = true;
     }
-  
   };
 });

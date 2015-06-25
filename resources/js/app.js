@@ -1,13 +1,19 @@
 'use strict';
 
 var PrototipoProgium = {};
-
+var _ScopeContainer = {};
 var App = angular.module('PrototipoProgium', ['PrototipoProgium.services', 'ngRoute']);
 
 App.controller('MainController', function($scope, $route, $routeParams, $location) {
      $scope.$route = $route;
      $scope.$location = $location;
      $scope.$routeParams = $routeParams;
+     $scope.esAdministrador = true;
+     $scope.esconderMenu = false;
+     $scope.esconderHeader = false;
+     
+     //Almacenar MainController Scoper para cambiar las variables desde otros scopes
+     _ScopeContainer['MainController'] = $scope;
 })
 
 App.config(function($routeProvider, $locationProvider) {
@@ -16,35 +22,31 @@ App.config(function($routeProvider, $locationProvider) {
 			templateUrl: 'modulos/seguridad/inicio-sesion.html',
 			controller: 'IniciarSesionController'
 		})
-		.when('/registrarcatalogo', {
-			templateUrl: 'RegistrarCatalogo.html',
-			controller: 'RegistrarCatalogoController'
+		.when('/usuario-registrar', {
+			templateUrl: 'modulos/seguridad/usuario-registrar.html',
+			controller: 'UsuarioRegistrarController'
 		})
-		.when('/registrarcotizacion', {
-			templateUrl: 'registrarCotizacion.html',
-			controller: 'RegistrarCotizacionController'
+		.when('/usuario-registrar-siguiente', {
+			templateUrl: 'modulos/seguridad/usuario-registrar-2.html',
+			controller: 'UsuarioRegistrarController'
 		})
-		.when('/menucliente', {
-			templateUrl: 'menucliente.html',
-			controller: 'MenuClienteController'
+		.when('/catering-registrar', {
+			templateUrl: 'modulos/catering/catering-registrar.html',
+			controller: 'CateringRegistrarController'
 		})
-		.when('/menuadministrador', {
-			templateUrl: 'menuadministrador.html',
-			controller: 'MenuAdministradorController'
+		.when('/catering-buscar', {
+			templateUrl: 'modulos/catering/catering-buscar.html',
+			controller: 'CateringBuscarController'
 		})
-		.when('/registrarcatering', {
-			templateUrl: 'registrarcatering.html',
-			controller: 'registrarCateringController'
+		.when('/producto-registrar', {
+			templateUrl: 'modulos/producto/producto-registrar.html',
+			controller: 'ProductoRegistrarController'
 		})
-		.when('/registrarcatalogo', {
-			templateUrl: 'registrarcatalogo.html',
-			controller: 'RegistrarCatalogoController'
-		})
-		.when('/buscarcatering', {
-			templateUrl: 'buscarcatering.html',
-			controller: 'BuscarCateringController'
+		.when('/cotizacion-registrar', {
+			templateUrl: 'modulos/cotizacion/cotizacion-registrar.html',
+			controller: 'CotizacionRegistrarController'
 		})
 		.otherwise({
-        	redirectTo: '/iniciosesion'
+        	redirectTo: '/iniciar-sesion'
 		});
 });

@@ -1,13 +1,12 @@
 'use strict';
 
 /**
- * RegistrarCateringController
+ * CateringRegistrarController
  * @constructor
  */
 
-App.controller('RegistrarCateringController', function($scope, $location) {
+App.controller('CateringRegistrarController', function($scope, $location) {
 
-  $scope.init();
-
+  //$scope.init();
 
 });

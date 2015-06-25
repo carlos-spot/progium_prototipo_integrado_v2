@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * RegistrarCotizacionController
+ * CotizacionRegistrarController
  * @constructor
  */
-App.controller('RegistrarCotizacionController', function($scope) {
+App.controller('CotizacionRegistrarController', function($scope) {
 
   $scope.date = new Date(), 'dd/mm/yyyy'
 });

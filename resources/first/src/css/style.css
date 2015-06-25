@@ -1,4 +1,4 @@
-html{background-color: #f39c12;position: relative;min-height: 100%;overflow-x:hidden;}
+html{background-color: #f5f6f7;position: relative;min-height: 100%;overflow-x:hidden;}
 body{background-color: transparent;color:#656565;font-size:13px;overflow-x: hidden;}
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family:'Open Sans',"HelveticaNeue", "Helvetica Neue", Helvetica, Arial,sans-serif;
@@ -12,8 +12,7 @@ a:hover, a:focus{text-decoration:none;}
           box-shadow: none;
 }
 img{max-width: 100%}
-.imgbanner{width: 520px;margin: 0px 330px;}
-
+.imgbanner{width: 223px;margin: 0px 0px 0px 0%;}
 /*primary nav*/
 .nav-primary:before, .nav-primary:after {display: table;content: " ";}
 .nav-primary:after {clear: both;}
@@ -89,7 +88,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge{color: #3a5
 .progress-mini{height: 6px}
 .progress-small{height: 10px}
 .progress-small .progress-bar{font-size: 10px;line-height: 1em}
-.navbar{background-color: #162636}
+.navbar{background-color: #fff}
 .navbar .nav .open > a, .navbar .nav .open > a:hover, .navbar .nav .open > a:focus{background: transparent;}
 .list-normal{background: transparent;}
 .list-normal > .list-group-item{border-radius: 0;border-width: 1px 0;background: transparent}
@@ -513,7 +512,7 @@ input[type="text"], select, textarea{min-width: 40px;height: auto;}
   .nav-vertical.nav-icon > ul > li > a i{margin: 8px auto;}
   .nav-primary.nav-vertical > ul > li > a > .badge{position: absolute;top: 4px;right: 15px;font-size: 11px;padding:3px 6px}
 
-  #nav{position: relative;width: 150px;position: absolute;z-index:1000;left:0;top:117px;bottom: 0;border-right:1px solid #162636}
+  #nav{position: relative;width: 150px;position: absolute;z-index:1000;left:0;top:50px;bottom: 0;border-right:1px solid #162636}
   #nav.bg-light{border-color:#bfc7d0}
   #nav.nav-vertical {width: 90px}
   #nav + #content{padding-left: 150px;}

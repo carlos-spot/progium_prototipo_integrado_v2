@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * RegistrarCatalogoController
+ * ProductoRegistrarController
  * @constructor
  */
-App.controller('RegistrarCatalogoController', function($scope) {
+App.controller('ProductoRegistrarController', function($scope) {
     $scope.tipos = [
         { id: 1, nombre: 'Grande' },
         { id: 2, nombre: 'Mediano' },
