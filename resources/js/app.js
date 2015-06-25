@@ -12,8 +12,8 @@ App.controller('MainController', function($scope, $route, $routeParams, $locatio
 
 App.config(function($routeProvider, $locationProvider) {
   	$routeProvider
-		.when('/iniciosesion', {
-			templateUrl: 'iniciosesion.html',
+		.when('/iniciar-sesion', {
+			templateUrl: 'modulos/seguridad/inicio-sesion.html',
 			controller: 'IniciarSesionController'
 		})
 		.when('/registrarcatalogo', {
