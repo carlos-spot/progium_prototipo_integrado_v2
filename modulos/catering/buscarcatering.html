@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Catering App</title>
+    <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="resources/first/src/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/first/src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/first/src/css/font.css">
+    <link rel="stylesheet" href="resources/first/src/css/style.css">
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header" class="navbar">
+      <ul class="nav navbar-nav navbar-avatar pull-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+            <span class="hidden-xs-only">Usuario Cliente</span>
+            <span class="thumb-small avatar inline"><img src="resources/first/src/images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+            <b class="caret hidden-xs-only"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="docs.html">Ayuda</a></li>
+            <li><a href="signin.html">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-avatar pull-left">
+        <li class="dropdown">
+          <img src="resources/first/src/images/banner2.jpg" alt="Mika Sokeil" class="imgbanner">
+        </li>
+      </ul>
+    </header>
+    <!-- / header -->
+    <!-- nav -->
+    <nav id="nav" class="nav-primary hidden-xs nav-vertical">
+      <ul class="nav" data-spy="affix" data-offset-top="50">
+        <li class="active"><a href="#/buscarcatering"><i class="fa fa-search fa-lg"></i><span>Buscar Catering</span></a></li>
+        <li class="dropdown-submenu">
+          <a href="#"><i class="fa fa-th fa-lg"></i><span>Subasta</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="buttons.html">Crear Subasta</a></li>
+            <li><a href="icons.html">Ver Subasta</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a href="#"><i class="fa fa-clipboard fa-lg"></i><span>Cotizaciones</span></a>
+        </li>
+        <li><a href="form.html"><i class="fa fa-thumbs-o-up fa-lg"></i><span>Catering Favoritos</span></a></li>
+        <li><a href="chart.html"><i class="fa fa-list fa-lg"></i><span>Lista de paquetes</span></a></li>
+        <li class="dropdown-submenu">
+          <a href="#"><i class="fa fa-bar-chart-o fa-lg"></i><span>Reportes</span></a>
+        </li>
+      </ul>
+    </nav>
+    <section  id="content" class="content-sidebar bg-white">
+      <!-- .sidebar -->
+      <aside class="sidebar bg-lighter">
+          <div class="bg-light padder padder-v" style="padding-bottom: 5px;">
+              <span class="h4 col-lg-offset-1">Búsqueda de Catering</span>
+          </div>
+          <ul class="list-group list-normal m-b-none">
+              <li class="list-group-item">
+                  Nombre
+                  <input type="text" name="buscar" placeholder="Buscar..." data-required="true" class="form-control input-sm" >
+              </li>
+              <li class="list-group-item">
+                  Provincia
+                  <select name="marca" class="form-control input-sm">
+                      <option value="0">Todas</option>
+                  </select>
+              </li>
+              <li class="list-group-item">
+                  Cantón
+                  <select name="modelo" class="form-control input-sm">
+                      <option value="0">Todos</option>
+                  </select>
+              </li>
+              <li class="list-group-item">
+                  Distrito
+                  <select name="modelo" class="form-control input-sm">
+                      <option value="0">Todos</option>
+                  </select>
+              </li>
+              <li class="list-group-item">
+                  Orden por
+                  <select name="orden" class="form-control input-sm">
+                      <option value="0">Más cercano</option>
+                      <option value="1">Mejor calificación</option>
+                  </select>
+              </li>
+              <li class="list-group-item pull-right">
+                  <button type="submit" class="btn btn-info btn-xs">Buscar</button>
+              </li>
+          </ul>
+      </aside>
+     </section>
+</body>
+    

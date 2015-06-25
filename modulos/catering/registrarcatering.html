@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Catering App</title>
+    <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <link rel="stylesheet" href="resources/first/src/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/first/src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/first/src/css/font.css">
+    <link rel="stylesheet" href="resources/first/src/css/style.css">
+  </head>
+  <body>
+   <!-- header -->
+    <header id="header" class="navbar">
+      <ul class="nav navbar-nav navbar-avatar pull-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">            
+            <span class="hidden-xs-only">Administrador</span>
+            <span class="thumb-small avatar inline"><img src="resources/first/src/images/avatar.jpg" alt="Mika Sokeil" class="img-circle"></span>
+            <b class="caret hidden-xs-only"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="docs.html">Ayuda</a></li>
+            <li><a href="signin.html">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-avatar pull-left">
+        <li class="dropdown">
+          <img src="resources/first/src/images/banner2.jpg" alt="Mika Sokeil" class="imgbanner">
+        </li>
+      </ul>
+    </header>
+    <!-- / header -->
+    <!-- nav -->
+    <nav id="nav" class="nav-primary hidden-xs nav-vertical">
+      <ul class="nav" data-spy="affix" data-offset-top="50">
+          <li class="dropdown-submenu">
+              <a href="#"><i class="fa fa-th fa-lg"></i><span>Catering</span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="#/registrarcatering">Crear</a></li>
+                  <li><a href="'registrarcatering.html'">Listar</a></li>
+              </ul>
+          </li>
+          <li class="dropdown-submenu">
+              <a href="#"><i class="fa fa-th fa-lg"></i><span>Cátalogo Producto</span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="#/registrarcatalogo">Crear</a></li>
+                  <li><a href="icons.html">Listar</a></li>
+              </ul>
+          </li>
+          <li class="dropdown-submenu">
+              <a href="#"><i class="fa fa-th fa-lg"></i><span>Paquetes</span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="buttons.html">Crear</a></li>
+                  <li><a href="icons.html">Listar</a></li>
+              </ul>
+          </li>
+        <li class="dropdown-submenu">
+          <a href="#"><i class="fa fa-clipboard fa-lg"></i><span>Subasta</span></a>
+        </li>
+        <li><a href="form.html"><i class="fa fa-thumbs-o-up fa-lg"></i><span>Cotizaciones</span></a></li>
+        <li class="dropdown-submenu">
+          <a href="#"><i class="fa fa-bar-chart-o fa-lg"></i><span>Reportes</span></a>
+        </li>
+      </ul>
+    </nav>
+  <section id="content">
+    <section class="main padder">
+      <div class="clearfix">
+        <h4><i class="fa fa-edit"></i>Registrar Catering Service</h4>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <section class="panel">
+            <div class="panel-body">
+              <form class="form-horizontal" method="get" data-validate="parsley">    
+               <div class="form-group">
+                  <label class="col-lg-3 control-label">Nombre</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="nombre" placeholder="Nombre" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                 <div class="form-group">
+                  <label class="col-lg-3 control-label">Dirección</label>
+                  <div class="col-lg-8">
+                    <textarea placeholder="Profile" rows="5" class="form-control" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Teléfono</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="telefono" placeholder="Telefono" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Teléfono Alternativo</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="telefonoAlternativo" placeholder="TelefonoAlternativo" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Horario de atención</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="horarioAtencion" placeholder="HorarioAtencion" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Cantidad de eventos por día</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="cantidadEvento" placeholder="CantidadEvento" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Provincia</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="provincia" placeholder="Provincia" data-required="true" class="form-control">
+                  </div>
+                </div> 
+
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Canton</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="canton" placeholder="canton" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Distrito</label>
+                  <div class="col-lg-8">
+                    <input type="text" ng-model="distrito" placeholder="distrito" data-required="true" class="form-control">
+                  </div>
+                </div> 
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Logo</label>
+                  <div class="col-lg-9 media">
+                    <div class="bg-light pull-left text-center media-large thumb-large"><i class="fa fa-user inline fa fa-light fa fa-3x m-t-large m-b-large"></i></div>
+                    <div class="media-body">
+                      <input type="file" name="file" title="Examinar" class="btn btn-sm btn-info m-b-small"><br>
+                      <button class="btn btn-sm btn-default">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-9 col-lg-offset-3">                      
+                    <button type="submit" class="btn btn-white">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+    </section>
+  </section>
+  <!-- footer -->
+
+	<script src="js/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.js"></script>
+  <!-- app -->
+  <script src="js/app.js"></script>
+  <script src="js/app.plugin.js"></script>
+  <script src="js/app.data.js"></script>
+  <!-- fuelux -->
+  <script src="js/fuelux/fuelux.js"></script>
+  <!-- datepicker -->
+  <script src="js/datepicker/bootstrap-datepicker.js"></script>
+  <!-- slider -->
+  <script src="js/slider/bootstrap-slider.js"></script>
+  <!-- file input -->  
+  <script src="js/file-input/bootstrap.file-input.js"></script>
+  <!-- combodate -->
+  <script src="js/combodate/moment.min.js"></script>
+  <script src="js/combodate/combodate.js"></script>
+  <!-- parsley -->
+  <script src="js/parsley/parsley.min.js"></script>
+  <!-- select2 -->
+  <script src="js/select2/select2.min.js"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 'use strict';
 
-var Examen1_Cine = {};
+var PrototipoProgium = {};
 
-var App = angular.module('Examen1_Cine', ['Examen1_Cine.services', 'ngRoute']);
+var App = angular.module('PrototipoProgium', ['PrototipoProgium.services', 'ngRoute']);
 
 App.controller('MainController', function($scope, $route, $routeParams, $location) {
      $scope.$route = $route;
@@ -12,38 +12,39 @@ App.controller('MainController', function($scope, $route, $routeParams, $locatio
 
 App.config(function($routeProvider, $locationProvider) {
   	$routeProvider
-		.when('/iniciar-sesion', {
-			templateUrl: 'modulos/iniciar-sesion/iniciar-sesion.html',
+		.when('/iniciosesion', {
+			templateUrl: 'iniciosesion.html',
 			controller: 'IniciarSesionController'
 		})
-		.when('/seleccionar-peliculas', {
-			templateUrl: 'modulos/peliculas/peliculas.html',
-			controller: 'PeliculasController'
+		.when('/registrarcatalogo', {
+			templateUrl: 'RegistrarCatalogo.html',
+			controller: 'RegistrarCatalogoController'
 		})
-		.when('/seleccionar-asientos/:fecha/:nombre/:tanda', {
-			templateUrl: 'modulos/asientos/asientos.html',
-			controller: 'AsientosController'
+		.when('/registrarcotizacion', {
+			templateUrl: 'registrarCotizacion.html',
+			controller: 'RegistrarCotizacionController'
 		})
-		.when('/factura/:jsonDatosPelicula', {
-			templateUrl: 'modulos/factura/factura.html',
-			controller: 'FacturaController'
+		.when('/menucliente', {
+			templateUrl: 'menucliente.html',
+			controller: 'MenuClienteController'
+		})
+		.when('/menuadministrador', {
+			templateUrl: 'menuadministrador.html',
+			controller: 'MenuAdministradorController'
+		})
+		.when('/registrarcatering', {
+			templateUrl: 'registrarcatering.html',
+			controller: 'registrarCateringController'
+		})
+		.when('/registrarcatalogo', {
+			templateUrl: 'registrarcatalogo.html',
+			controller: 'RegistrarCatalogoController'
+		})
+		.when('/buscarcatering', {
+			templateUrl: 'buscarcatering.html',
+			controller: 'BuscarCateringController'
 		})
 		.otherwise({
-        	redirectTo: '/iniciar-sesion'
+        	redirectTo: '/iniciosesion'
 		});
-
-	//$locationProvider.html5Mode(true);
-	//$httpProvider.responseInterceptors.push('responseHttpInterceptor');
 });
-
-// .config(function($routeProvider, $locationProvider) {
-//   $routeProvider
-//    .when('/Book/:bookId', {
-//     templateUrl: 'book.html',
-//     controller: 'BookController'
-//   })
-//   .when('/Book/:bookId/ch/:chapterId', {
-//     templateUrl: 'chapter.html',
-//     controller: 'ChapterController'
-//   });
-// });
